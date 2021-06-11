@@ -1,0 +1,2219 @@
+ * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+ 
+
+/* Menu Hamburguesa */
+
+.row {
+    --bs-gutter-x: 0 !important;
+}
+
+.hamburger {
+    background-color: transparent;
+	height: 30px;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	-webkit-transition: -webkit-transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+	transition: transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+	z-index: 1002;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none
+}
+
+.hamburger.active {
+  background-color: none;
+  position: fixed;
+  top: 90px;
+
+}
+
+
+.linea {
+	background: #333333;
+	margin-bottom: 4px;
+	border-radius: 2px;
+	width: 28px;
+	height: 4px;
+	opacity: 1;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	-webkit-transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+	transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+}
+
+.hamburger:hover .top {
+	-webkit-transform: translateY(-100%);
+	-ms-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+
+.hamburger:hover .bottom {
+	-webkit-transform: translateY(100%);
+	-ms-transform: translateY(100%);
+	transform: translateY(100%);
+}
+
+.hamburger.active .top {
+	-webkit-transform: translateY(200%) rotate(45deg) !important;
+	-ms-transform: translateY(200%) rotate(45deg) !important;
+	transform: translateY(200%) rotate(45deg) !important;
+}
+
+.hamburger.active .center {
+	opacity:0; 
+}
+
+.hamburger.active .bottom {
+	-webkit-transform: translateY(-200%) rotate(135deg) !important;
+	-ms-transform: translateY(-200%) rotate(135deg) !important;
+	transform: translateY(-200%) rotate(135deg) !important;
+}
+
+.menu.active {
+  transform: translate3d(0px, 0px, 0px);
+}
+
+.menu {
+    background-color: #F5DA4A;
+    position: fixed;
+    transform: translate3d(0px, -100%, 0px);
+    transition: transform 0.35s cubic-bezier(0.05, 1.04, 0.72, 0.98) 0s;
+    width: 100%;
+    z-index: 1001;
+    height: 640px;
+}
+
+
+
+/* Meunu Hamburguesa - LADO Yellow */
+
+.logo-mind-mobile {
+    display: none;
+}
+.column-left-hamburg {
+    display: flex;
+    height: 640px;
+    justify-content: start;
+    flex-direction: column;
+    position: relative;
+    top: 74px;
+    left: 150px;
+}
+
+.column-left-hamburg div img {
+    width: 41%; 
+}
+
+.column-center-hamburg {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 640px;
+}
+
+.column-center-hamburg a p{
+    font-size: 20px;
+    font-weight: 400;
+    color: #000000;
+}
+
+.column-center-hamburg a {
+    text-decoration: none;
+}
+
+.column-center-hamburg a .title-bold{
+    font-size: 24px;
+    font-weight: 600;
+    color: #000000;
+}
+
+.contenido-logos-hamburg {
+    display: flex;
+}
+
+.title-logos-hamburg {
+    font-size: 20px;
+    font-weight: 300;
+    font-style: italic;
+    color: #000000;
+    position: relative;
+    top: 95px;
+    left: 65px;
+}
+
+.contenido-logos-hamburg a img {
+    width: 60%;
+    margin-left: 30px;
+    transition: all 0.2 ease;
+}
+
+.contenido-logos-hamburg a img:hover {
+    transform: scale(1.2);
+}
+
+.contenido-center-hamburg a p {
+    transition: all 0.5 ease;
+}
+
+.contenido-center-hamburg a p:hover  {
+    color: #ffffff;
+}
+
+
+/* Header */
+header {
+    background-image: url(../Assets/Header/Banner.png);
+    height: 640px;
+    width: 100%;
+    margin-bottom: 30px;
+    background-size: cover;
+}
+
+.column-left {
+    display: flex;
+    flex-direction: column;
+    height: 640px;
+    padding-left: 150px;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.column-left h1 {
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 68px;
+    color: #ffffff;
+    position: relative;
+    top: 55px;
+}
+
+.column-left p {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 27px;
+    color: #F3F3F3;
+    position: relative;
+    top: -45px;
+}
+
+.column-left p span {
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.column-left .logo-mind {
+   width: 25%;
+}
+
+.column-center {
+    display: flex;
+    height: 640px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.logo-mind-mobile {
+    display: none;
+}
+
+.column-center .div-btn {
+    top: 160px;
+    position: relative;
+}
+
+
+.column-center .div-btn a {
+     text-decoration: none;
+     color: #E5E5E5;
+     font-size: 24px;
+     font-weight: 700;
+     border: 4px solid #F5DA4A;
+     border-color: #F5DA4A;
+     padding: 5px 50px;
+     border-radius: 8px;
+     position: relative;
+}
+
+.column-center .div-btn a:before {
+    content:"";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: all 1s ease;
+  }
+  .column-center .div-btn a:hover:before {
+  width: 100%;
+  }
+
+.column-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: #F5DA4A;
+    height: 640px;
+    width: 100px;
+    position: relative;
+    left: 50px;
+  
+}
+
+
+ .logos-redes {
+     display: flex;
+     flex-direction: column;
+     position: relative;
+     top: 10px; 
+ }
+
+ .logos-redes a img {
+    width: 110%;
+    margin-bottom: 30px;
+    transition: all 0.2 ease;
+ }
+
+ .logos-redes a img:hover {
+     transform: scale(1.2);
+ }
+
+
+ /* Seccion 1 */
+
+ .contenedor-box-top {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+
+ .box-top {
+    box-shadow: 2px 2px 10px 3px rgba(90, 90, 90, 0.2);
+    border-radius: 12px;
+    width: 280px;
+    height: 220px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2 ease;
+    position: relative;
+    z-index: 20;
+    background-color: #ffffff;
+}
+
+.box-top:hover {
+    transform: scale(1.1);
+}
+
+.box-top a {
+    text-decoration: none;
+}
+
+.box-top a img {
+    position: relative;
+    left: 10px;
+}
+
+.box-top a p {
+    font-size: 18px ;
+    font-weight: 600;
+    color: #383838;
+    padding-top: 20px;
+}
+
+.box-top a .logo-flecha {
+    position: relative;
+    left: 10px;
+}
+
+.title-box-top h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #383838;
+    margin-bottom: 50px;
+}
+
+
+ .contenedor-box-bottom {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 150px;
+    
+}  
+
+
+
+.box-bottom {
+    box-shadow: 2px 2px 10px 3px rgba(90, 90, 90, 0.2);
+    border-radius: 12px;
+    width: 240px;
+    height: 190px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2 ease;
+    position: relative;
+    z-index: 20;
+    background-color: #ffffff;
+}
+
+.box-bottom:hover {
+    transform: scale(1.1);
+}
+
+.box-bottom a {
+    text-decoration: none;
+}
+
+.box-bottom a .logo-chat {
+     position: relative;
+     left: 22px;
+     width: 70%;
+}
+
+.box-bottom a .logo-maleta {
+    position: relative;
+    left: 26px;
+    width: 58%;
+}
+
+.box-bottom a .logo-flecha-azul {
+    position: relative;
+    left: 28px;
+    width: 60%;
+}
+
+.box-bottom a .logo-laboratorio {
+    position: relative;
+    left: 45px;
+    width: 35%;
+}
+
+.box-bottom a p {
+    font-size: 18px ;
+    font-weight: 600;
+    color: #383838;
+    padding-top: 20px;
+}
+
+.box-bottom a .logo-flecha {
+    position: relative;
+    left: 10px;
+}
+
+
+/* Seccion 2 */
+
+.contenedor-title-seccion-2 {
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.title-seccion-2 h3 {
+    color: #383838;
+    font-size: 40px;
+    font-weight: 700;
+    width: 770px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contenedor-logos-rubros {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.logos-rubros {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100px;
+}
+
+
+.logos-rubros p {
+    color: #383838;
+    font-size: 18px;
+    font-weight: 600;
+    padding-top: 20px;
+}
+
+
+/* Seccion central 3 - frnaja */
+.row-seccion-2 {
+    margin: 50px 0;
+}
+.franja-negra {
+    background-color: #383838;
+    width: 100%;
+    height: 180px;
+}
+
+.contenedor-franja-negra {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.contenedor-franja-negra div h3 {
+    color: #F5DA4A;
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.contenedor-logo-bancos {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 20px;
+    align-items: center;
+}
+
+
+/* Seccion 4 */
+.row-seccion-4 {
+    margin-top: 100px !important;
+    margin-bottom: 100px !important;
+}
+.contenedor-seccion-4-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seccion-4-left h2 {
+     font-size: 40px;
+     font-weight: 700;
+     line-height: 54px;
+     color: #383838;
+}
+
+.seccion-4-left p {
+     font-size: 25px;
+     font-weight: 600;
+     line-height: 31px;
+     color: #383838;
+     margin: 30px 0;
+}
+
+.seccion-4-left a {
+     font-size: 24px;
+     font-weight: 600;
+     color: #383838;
+     text-decoration: none;
+     border-color: #F5DA4A;
+     background-color: #F5DA4A;
+     padding: 7px 65px;
+     border-radius: 10px;
+     position: relative;
+     transition: all 1s ease;
+}
+
+.seccion-4-left a:hover {
+     transform: scale(1.1);
+     color: #F5DA4A;
+     background-color: #383838;
+}
+
+.contenedor-seccion-4-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seccion-4-right img {
+    width: 660px;
+    height: 460px;
+}
+
+
+/* Footer */
+
+footer {
+    width: 100%;
+    height: 425px;
+    background-color: #383838;
+    border-top: 5px solid #F5DA4A;
+    padding-top: 100px;
+}
+
+.contenedor-footer-fila-1 {
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    align-items: flex-start;
+    justify-content: space-around;
+    position: relative;
+    left: 100px;
+   
+}
+
+.contenedor-footer-fila-2 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 24px;
+    align-items: flex-end;
+    right: 100px;
+    
+}
+
+.logo-rompecabeza p {
+     font-size: 18px;
+     font-weight: 700;
+     color: #ffffff;
+}
+
+.direccion-rompecabeza p {
+     font-size: 18px;
+     font-weight: 400;
+     color: #ffffff;
+     position: relative;
+     top: 48px;
+}
+
+.logos-redes-footer a img {
+    margin-left: 10px;
+}
+
+.links-footer a {
+    font-size: 18px;
+    font-weight: 400;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.links-footer a:hover {
+    color: #F5DA4A;
+}
+
+.logos-redes-footer a img {
+    transition: all 0.2 ease;
+}
+
+.logos-redes-footer a img:hover {
+    transform: scale(1.2);
+}
+
+.logo-rompecabeza p a img {
+    transition: all 0.2 ease;
+    margin-left: 10px;
+}
+
+.logo-rompecabeza p a img:hover {
+    transform: scale(1.1);
+}
+
+.contenedor-fondo-gris {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 10;
+    top: 880px;
+    left: 0;
+
+}
+
+.fondo-gris {
+    width: 1080px;
+}
+
+
+
+
+/* BRAKEPOINTS  HOME*/
+
+
+@media (max-width: 413.98px) { 
+
+    .contenedor-fondo-gris {
+        display: none;
+    }
+
+    .column-left-hamburg {
+        height: 70px;
+    }
+
+    .column-left-hamburg div img {
+        width: 28%;
+        position: relative;
+        top: 0;
+        left: -113px;
+    }
+
+    .title-box-top h2 {
+        font-size: 32px;
+    }
+
+    .logo-mind{
+        display: none;
+    }
+
+    .logo-mind-mobile-nav {
+        width: 65%;
+        position: relative;
+        top: -6px;
+    }
+
+    .menu {
+        height: 600px;
+        position: absolute;
+    }
+
+    .column-left {
+        padding-left: 20px;
+        height: 0;
+        justify-content: flex-start;
+        align-items: flex-start;
+       
+    }
+
+    .column-right {
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        align-items: center;
+        height: 100px;
+        width: 100%;
+        left: 0;
+    }
+
+    .logos-redes {
+        display: none;
+    }
+
+    .logo-responsive {
+        position: relative;
+      
+    }
+
+    .logo-mind-mobile {
+        display: block;
+    }
+
+    .column-center-hamburg {
+        height: 600px;
+    }
+
+
+    .column-left h1 {
+        font-size: 32px;
+        line-height: 48px;
+        position: relative;
+        top: 145px;
+    }
+
+    .column-left p {
+        width: 330px;
+        position: relative;
+        top: 200px;
+    }
+
+    .column-left img {
+        position: relative;
+        top: 170px;
+    }
+
+    .column-center {
+        height: 0;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+        top: 365px;
+        left: 20px;
+    }
+
+    .column-mobile-logos {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    header {
+        height: 600px;
+    }
+
+    .column-center .div-btn {
+        top: 135px;
+        position: relative;
+        left: 52px;
+    }
+
+    .title-seccion-2 h3 {
+        width: 350px;
+        font-size: 28px;
+        line-height: 46px;
+    }
+
+    .row-seccion-2 {
+        background-color: #F9F9F9;
+        margin: 0;
+        width: 100%;
+    }
+
+    .contenedor-logos-rubros {
+        flex-wrap: wrap-reverse;
+        gap: 60px;
+    }
+
+    .franja-negra {
+        height: 400px;
+    }
+
+    .contenedor-franja-negra div h3 {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .contenedor-logo-bancos {
+        flex-direction: column;
+    }
+
+    .logo-bancos {
+        margin-bottom: 30px;
+        border-bottom: 1px solid #ffffff;
+    }
+
+    .seccion-4-right img {
+        width: 322px;
+        height: 255px;
+        margin-top: 50px;
+
+    }
+
+    .seccion-4-left h2 {
+        text-align: center;
+    }
+
+    .seccion-4-left p {
+        text-align: center;
+    }
+
+    .seccion-4-left a {
+        left: 25px;
+    }
+
+    footer {
+        padding-top: 25px;
+    }
+
+    .contenedor-footer-fila-1 {
+        left: 0;
+    }
+
+    .contenedor-footer-fila-2 {
+        right: 0;
+        align-items: center;
+    }
+
+    .hamburger.active {
+        left: 200px !important;
+    }
+
+    .row-seccion-4 {
+        margin-top: 40px !important;
+    }
+
+}
+
+@media (min-width: 414px) and (max-width: 575.98px) { 
+    
+    .contenedor-fondo-gris {
+        display: none;
+    }
+
+    .column-left-hamburg {
+        height: 70px;
+    }
+
+    .column-left-hamburg div img {
+        width: 28%;
+        position: relative;
+        top: 0;
+        left: -113px;
+    }
+
+    .title-box-top h2 {
+        font-size: 32px;
+    }
+
+    .logo-mind{
+        display: none;
+    }
+
+    .logo-mind-mobile-nav {
+        width: 65%;
+        position: relative;
+        top: -6px;
+    }
+
+    .menu {
+        height: 600px;
+        position: absolute;
+    }
+
+    .column-left {
+        padding-left: 20px;
+        height: 0;
+        justify-content: flex-start;
+        align-items: flex-start;
+       
+    }
+
+    .column-right {
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        align-items: center;
+        height: 100px;
+        width: 100%;
+        left: 0;
+    }
+
+    .logos-redes {
+        display: none;
+    }
+
+    .logo-responsive {
+        position: relative;
+      
+    }
+
+    .logo-mind-mobile {
+        display: block;
+    }
+
+    .column-center-hamburg {
+        height: 600px;
+    }
+
+
+    .column-left h1 {
+        font-size: 32px;
+        line-height: 48px;
+        position: relative;
+        top: 145px;
+    }
+
+    .column-left p {
+        width: 330px;
+        position: relative;
+        top: 200px;
+    }
+
+    .column-left img {
+        position: relative;
+        top: 170px;
+    }
+
+    .column-center {
+        height: 0;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+        top: 365px;
+        left: 20px;
+    }
+
+    .column-mobile-logos {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    header {
+        height: 600px;
+    }
+
+    .column-center .div-btn {
+        top: 135px;
+        position: relative;
+        left: 52px;
+    }
+
+    .title-seccion-2 h3 {
+        width: 350px;
+        font-size: 28px;
+        line-height: 46px;
+    }
+
+    .row-seccion-2 {
+        background-color: #F9F9F9;
+        margin: 0;
+        width: 100%;
+    }
+
+    .contenedor-logos-rubros {
+        flex-wrap: wrap-reverse;
+        gap: 60px;
+    }
+
+    .franja-negra {
+        height: 400px;
+    }
+
+    .contenedor-franja-negra div h3 {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .contenedor-logo-bancos {
+        flex-direction: column;
+    }
+
+    .logo-bancos {
+        margin-bottom: 30px;
+        border-bottom: 1px solid #ffffff;
+    }
+
+    .seccion-4-right img {
+        width: 322px;
+        height: 255px;
+        margin-top: 50px;
+
+    }
+
+    .seccion-4-left h2 {
+        text-align: center;
+    }
+
+    .seccion-4-left p {
+        text-align: center;
+    }
+
+    .seccion-4-left a {
+        left: 50px;
+    }
+
+    footer {
+        padding-top: 25px;
+    }
+
+    .contenedor-footer-fila-1 {
+        left: 0;
+    }
+
+    .contenedor-footer-fila-2 {
+        right: 0;
+        align-items: center;
+    }
+
+    .hamburger.active {
+        left: 330px;
+    }
+
+    .row-seccion-4 {
+        margin-top: 40px !important;
+    }
+
+    
+ 
+ 
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) { 
+
+    .contenedor-fondo-gris {
+        display: none;
+    }
+
+    .column-left-hamburg {
+        height: 70px;
+    }
+
+    .column-left-hamburg div img {
+        width: 80%;
+        position: relative;
+        top: -35px;
+        left: -113px;
+    }
+
+    .title-box-top h2 {
+        font-size: 32px;
+    }
+
+    .logo-mind{
+        display: none;
+    }
+
+    .logo-mind-mobile-nav {
+        width: 65%;
+        position: relative;
+        top: -6px;
+    }
+
+    .menu {
+        height: 600px;
+        position: absolute;
+    }
+
+    .column-left {
+        padding-left: 20px;
+        height: 0;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position: relative;
+        top: 50px;
+        left: 125px;
+       
+    }
+
+    .row-seccion-2 {
+        background-color: #F9F9F9;
+        margin: 0;
+         width: 100%;
+    }
+
+    .contenedor-logos-rubros {
+        flex-wrap: wrap-reverse;
+        gap: 40px;
+       
+    }
+
+    .column-right {
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        align-items: center;
+        height: 100px;
+        width: 100%;
+        position: absolute;
+        right: 0px;
+        left: 0;
+    }
+
+    .logos-redes {
+        display: none;
+    }
+
+    .logo-responsive {
+        position: relative;
+      
+    }
+
+    .logo-mind-mobile {
+        display: block;
+    }
+
+    .column-center-hamburg {
+        height: 600px;
+    }
+
+
+    .column-left h1 {
+        font-size: 32px;
+        line-height: 48px;
+        position: relative;
+        top: 125px;
+        width: 500px;
+    }
+
+    .column-left p {
+        width: 375px;
+        position: relative;
+        top: 162px;
+    }
+
+    .column-left img {
+        position: relative;
+        top: 140px;
+    }
+
+    .column-center {
+        height: 0;
+        align-items: center;
+        justify-content: flex-start;
+        position: absolute;
+        top: 400px;
+        left: 100px;
+    }
+
+    .column-mobile-logos {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    header {
+        height: 600px;
+    }
+
+    .column-center .div-btn {
+        top: 135px;
+        position: relative;
+        left: 52px;
+    }
+
+    .title-seccion-2 h3 {
+        width: 418px;
+        font-size: 32px;
+        line-height: 46px;
+    }
+
+    .franja-negra {
+        height: 400px;
+    }
+
+    .contenedor-franja-negra div h3 {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .contenedor-logo-bancos {
+        flex-direction: column;
+    }
+
+    .logo-bancos {
+        margin-bottom: 30px;
+        border-bottom: 1px solid #ffffff;
+    }
+
+    .row-seccion-4 {
+        flex-direction: column ;
+        margin-top: 50px !important;
+    }
+
+    .seccion-4-right img {
+        display: block;
+        width: 500px;
+        height: 370px;
+        margin-top: 50px;
+        margin: auto;
+        margin: 30px 0;
+
+    }
+
+    .seccion-4-left {
+        position: relative;
+        left: 125px;
+    }
+
+    .seccion-4-right {
+        position: relative;
+        left: 125px;
+    }
+
+    .seccion-4-left h2 {
+        text-align: center;
+    }
+
+    .seccion-4-left p {
+        text-align: center;
+    }
+
+    .seccion-4-left a {
+        left: 0;
+        margin: 30px 0;
+    }
+
+    footer {
+        padding-top: 25px;
+    }
+
+    .contenedor-footer-fila-1 {
+        left: 0;
+    }
+
+    .contenedor-footer-fila-2 {
+        right: 0;
+        align-items: center;
+    }
+
+    .links-footer {
+        width: 500px;
+    }
+
+    .hamburger.active {
+        left: 500px;
+        top: 53px;
+    }
+
+}
+ 
+@media (min-width: 768px) and (max-width: 991.98px) { 
+
+    .contenedor-fondo-gris {
+        display: none;
+    }
+
+    .column-left-hamburg {
+        height: 70px;
+    }
+
+    .column-left-hamburg div img {
+        width: 60%;
+        position: relative;
+        top: 0;
+        left: -113px;
+    }
+
+    .title-box-top h2 {
+        font-size: 32px;
+    }
+
+    .logo-mind{
+        display: none;
+    }
+
+    .logo-mind-mobile-nav {
+        width: 65%;
+        position: relative;
+        top: -6px;
+    }
+
+    .menu {
+        height: 600px;
+        position: absolute;
+    }
+
+    .column-left {
+        padding-left: 20px;
+        height: 0;
+        justify-content: end;
+        align-items: end;
+        position: relative;
+        top: 50px;
+        left: 110px;
+       
+    }
+
+    .column-right {
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        align-items: center;
+        height: 100px;
+        width: 100%;
+        position: absolute;
+        right: 0px;
+        left: 0;
+    }
+
+    .logos-redes {
+        display: none;
+    }
+
+    .logo-responsive {
+        position: relative;
+      
+    }
+
+    .logo-mind-mobile {
+        display: block;
+    }
+
+    .column-center-hamburg {
+        height: 600px;
+    }
+
+    .hamburger.active {
+        left: 635px;
+    }
+
+
+    .column-left h1 {
+        font-size: 32px;
+        line-height: 48px;
+        position: relative;
+        top: 125px;
+    }
+
+    .column-left p {
+        width: 375px;
+        position: relative;
+        top: 162px;
+    }
+
+    .column-left img {
+        position: relative;
+        top: 140px;
+    }
+
+    .column-center {
+        height: 0;
+        align-items: center;
+        justify-content: flex-start;
+        position: absolute;
+        top: 400px;
+        left: 100px;
+    }
+
+    .column-mobile-logos {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    header {
+        height: 600px;
+    }
+
+    .column-center .div-btn {
+        top: 135px;
+        position: relative;
+        left: 52px;
+    }
+
+    .title-seccion-2 h3 {
+        width: 418px;
+        font-size: 32px;
+        line-height: 46px;
+    }
+
+    .row-seccion-2 {
+        background-color: #F9F9F9;
+        margin: 0; 
+        width: 100%;
+    }
+
+    .contenedor-logos-rubros {
+        flex-wrap: wrap-reverse;
+        gap: 40px;
+      
+    }
+
+    .franja-negra {
+        height: 400px;
+    }
+
+    .contenedor-franja-negra div h3 {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .contenedor-logo-bancos {
+        flex-direction: column;
+    }
+
+    .logo-bancos {
+        margin-bottom: 30px;
+        border-bottom: 1px solid #ffffff;
+    }
+
+    .row-seccion-4 {
+        flex-direction: column ;
+    }
+
+    .seccion-4-right img {
+        display: block;
+        width: 500px;
+        height: 370px;
+        margin-top: 50px;
+        margin: auto;
+        margin: 30px 0;
+
+    }
+
+    .seccion-4-left {
+        position: relative;
+        left: 170px;
+    }
+
+    .seccion-4-right {
+        position: relative;
+        left: 170px;
+    }
+
+    .seccion-4-left h2 {
+        text-align: center;
+        width: 600px;
+    }
+
+    .seccion-4-left p {
+        text-align: center;
+    }
+
+    .seccion-4-left a {
+        left: 150px;
+    
+    }
+
+    footer {
+        padding-top: 25px;
+    }
+
+    .contenedor-footer-fila-1 {
+        left: 0;
+    }
+
+    .contenedor-footer-fila-2 {
+        right: 0;
+        align-items: center;
+    }
+
+    .links-footer {
+        width: 500px;
+    }
+
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+
+    .column-left .logo-mind {
+        width: 50%;
+    }
+
+    .column-left h1 {
+        font-size: 35px;
+        line-height: 50px;
+    }
+
+    .column-left {
+        padding-left: 100px;
+    }
+
+    .column-center .div-btn {
+        position: absolute;
+        top: 466px;
+    }
+
+    .column-center .div-btn a {
+        padding: 5px 30px;
+    }
+
+    .fondo-gris {
+        width: 240px;
+        height: 483px;
+    }
+
+    .seccion-4-right img {
+        width: 510px;
+        height: 390px;
+    }
+
+}
+
+@media (min-width: 1920px) { 
+    .fondo-gris {
+        width: 1323px;
+        height: 290px;
+    }
+
+    .column-center .div-btn {
+        right: 195px;
+    }
+}
+
+
+
+
+
+
+
+/* ----------------------------  SECCION CONTACTO ---------------------------- */
+
+/* Meunu Hamburguesa - LADO Yellow */
+
+
+.column-left-hamburg-contacto {
+    display: flex;
+    height: 640px;
+    justify-content: start;
+    flex-direction: column;
+    position: relative;
+    top: 74px;
+    left: 150px;
+}
+
+.column-left-hamburg-contacto div img {
+    width: 41%;
+    position: relative;
+    top: -20px;
+    
+}
+
+.column-center-hamburg-contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 640px;
+}
+
+.column-center-hamburg-contacto a p{
+    font-size: 20px;
+    font-weight: 400;
+    color: #000000;
+}
+
+.column-center-hamburg-contacto a {
+    text-decoration: none;
+}
+
+.column-center-hamburg-contacto a .title-bold{
+    font-size: 24px;
+    font-weight: 600;
+    color: #000000;
+}
+
+.contenido-logos-hamburg-contacto {
+    display: flex;
+}
+
+.title-logos-hamburg-contacto {
+    font-size: 20px;
+    font-weight: 300;
+    font-style: italic;
+    color: #000000;
+    position: relative;
+    top: 95px;
+    left: 65px;
+}
+
+.contenido-logos-hamburg-contacto a img {
+    width: 60%;
+    margin-left: 30px;
+    transition: all 0.2 ease;
+}
+
+.contenido-logos-hamburg-contacto a img:hover {
+    transform: scale(1.2);
+}
+
+.contenido-center-hamburg-contacto a p {
+    transition: all 0.5 ease;
+}
+
+.contenido-center-hamburg-contacto a p:hover  {
+    color: #ffffff;
+}
+
+
+/* Header */
+
+.logo-mind-mobile-display-none {
+    display: none;
+}
+
+.header-contacto {
+    height: 150px;
+    width: 100%;
+    margin-bottom: 30px;
+    background-color: #F5DA4A;
+    background-image: none;
+    margin-bottom: 100px;
+}
+.header-seccion-contacto {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ .logo-mind-contacto {
+    width: 70%;
+    position: relative;
+    left: 50px;
+ }
+
+ .header-normal-contacto {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+ }
+
+ .logo-responsive-contacto {
+    display: flex;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    right: 100px;
+    top: 0 !important;
+ }
+
+
+ /* Seccion mapa y formilario */
+ 
+ .contenedor-formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 150px;
+ }
+
+ .formulario-left {
+    box-shadow: 2px 2px 10px 3px rgba(90, 90, 90, 0.2);
+    border-radius: 12px;
+    height: 680px;
+    background-color: #F5DA4A;
+    padding: 20px;
+ }
+
+ .formulario-left h3 {
+     font-size: 28px;
+     font-weight: 600;
+     color: #263238;
+     text-align: center;
+ }
+
+ .formulario-left p {
+    font-size: 12px;
+    font-weight: 400;
+    color: #263238;
+    text-align: center;
+}
+
+.formulario-left p span {
+     font-weight: 600;
+     font-size: 12px;
+     color: #263238;
+}
+
+.btn-formulario {
+   color: #EFEFEF !important;
+   font-size: 18px !important;
+   font-weight: 700 !important;
+   background-color: #4A9DC2 !important;
+   padding: 5px 50px !important;
+   border-radius: 9px !important;
+   margin: auto !important;
+   display: block !important;
+   transition: all 0.8 ease !important;
+}
+
+.btn-formulario:hover {
+    transform: scale(1.1) !important;
+    color: #ffffff !important;
+    background-color: #263238 !important;
+}
+
+
+.contenedor-mapa {
+    display: flex;
+    justify-content: center;
+}
+
+.mapa-right {
+    box-shadow: 2px 2px 10px 3px rgba(90, 90, 90, 0.2);
+    border-radius: 12px;
+    width: 560px;
+    height: 680px;
+    background-color: #F5DA4A;
+}
+
+.direccion-rompecabeza-ceccion-mapa p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+    color: #383838;
+    position: relative;
+    top: 15px;
+    left: 30px;
+}
+
+
+
+/* Seccion 3 - contactos */
+
+.seccion-3-contacto {
+    width: 100%;
+    height: 390px;
+    background-color: #383838;
+}
+
+.contenedor-seccion-3-contactos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seccion-3-contactos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 390px;
+}
+
+.seccion-3-contactos h2 {
+     font-size: 40px;
+     font-weight: 700;
+     color: #F5DA4A;
+}
+
+.seccion-3-contactos p {
+    font-size: 25px;
+    font-weight: 600;
+    color: #ffffff;
+    padding: 25px 0;
+}
+
+.seccion-3-contactos a {
+    font-size: 24px;
+    font-weight: 600;
+    color: #383838;
+    text-decoration: none;
+    border-color: #F5DA4A;
+    background-color: #F5DA4A;
+    padding: 7px 65px;
+    border-radius: 10px;
+    position: relative;
+    transition: all 1s ease;
+}
+
+.seccion-3-contactos a:hover {
+    transform: scale(1.1) ;
+    color: #383838;
+    background-color: #EFEFEF;
+}
+
+
+
+/* BRAKEPOINTS  CONTACTO*/
+
+@media  (max-width: 413.98px) {  
+    .column-left-hamburg-contacto {
+        height: 70px;
+    }
+
+    .column-left-hamburg-contacto div img {
+        width: 28%;
+        position: relative;
+        top: -29px;
+        left: -113px;
+    }
+
+    .logo-responsive-contacto {
+        right: 35px;
+    }
+
+    .column-center-hamburg-contacto {
+        position: relative;
+        left: -25px;
+        height: 590px;
+    }
+
+    .title-box-top h2 {
+        font-size: 32px;
+    }
+
+    .logo-mind-contacto {
+        left: 0;
+    }
+
+    .menu {
+        height: 600px;
+        position: absolute;
+    }
+
+    .contenedor-box-bottom {
+        margin-bottom: 70px;
+        flex-wrap: wrap;
+    }
+
+    .box-bottom {
+        margin-bottom: 30px;
+    }
+
+    .contenedor-formulario {
+        margin-bottom: 60px;
+    }
+
+    .gmap_canvas {
+        width: 370px !important;
+    }
+
+    .mapouter  {
+        width: 370px !important;
+    }
+
+    .mapa-right {
+        margin-bottom: 50px;
+        width: 370px;
+    }
+
+    .seccion-3-contactos h2 {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .seccion-3-contactos p {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .seccion-3-contactos a {
+        font-size: 18px;
+    }
+
+    footer {
+        padding-top: 25px;
+    }
+
+    .contenedor-footer-fila-1 {
+        left: 0;
+    }
+
+    .contenedor-footer-fila-2 {
+        right: 0;
+        align-items: center;
+    }
+
+    .hamburger.active {
+        left: 160px;
+    }
+
+
+}
+
+    @media (min-width: 414px) and (max-width: 575.98px) { 
+    .column-left-hamburg-contacto {
+        height: 70px;
+    }
+
+    .column-left-hamburg-contacto div img {
+        width: 28%;
+        position: relative;
+        top: -29px;
+        left: -113px;
+    }
+
+    .logo-responsive-contacto {
+        right: 35px;
+    }
+
+    .column-center-hamburg-contacto {
+        position: relative;
+        left: -25px;
+        height: 590px;
+    }
+
+    .title-box-top h2 {
+        font-size: 32px;
+    }
+
+    .logo-mind-contacto {
+        left: 0;
+    }
+
+    .menu {
+        height: 600px;
+        position: absolute;
+    }
+
+    .contenedor-box-bottom {
+        margin-bottom: 70px;
+        flex-wrap: wrap;
+    }
+
+    .box-bottom {
+        margin-bottom: 30px;
+    }
+
+    .contenedor-formulario {
+        margin-bottom: 60px;
+    }
+
+    .gmap_canvas {
+        width: 405px !important;
+    }
+
+    .mapouter  {
+        width: 405px !important;
+    }
+
+    .mapa-right {
+        margin-bottom: 50px;
+        width: 405px;
+    }
+
+    .seccion-3-contactos h2 {
+        font-size: 25px;
+    }
+
+    .seccion-3-contactos p {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .seccion-3-contactos a {
+        font-size: 18px;
+    }
+
+    footer {
+        padding-top: 25px;
+    }
+
+    .contenedor-footer-fila-1 {
+        left: 0;
+    }
+
+    .contenedor-footer-fila-2 {
+        right: 0;
+        align-items: center;
+    }
+
+    .hamburger.active {
+        left: 257px;
+    }
+
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .column-left-hamburg-contacto {
+        height: 70px;
+    }
+
+    .column-left-hamburg-contacto div img {
+        width: 100%;
+        position: relative;
+        top: -25px;
+        left: -113px;
+    }
+
+    .logo-responsive-contacto {
+        right: 35px;
+    }
+
+    .column-center-hamburg-contacto {
+        position: relative;
+        left: -25px;
+        height: 590px;
+        top: 60px;
+    }
+
+    .title-box-top h2 {
+        font-size: 32px;
+    }
+
+    .logo-mind-contacto {
+        left: 0;
+    }
+
+    .menu {
+        height: 600px;
+        position: fixed;
+    }
+
+    .contenedor-box-bottom {
+        margin-bottom: 70px;
+        flex-wrap: wrap;
+    }
+
+    .box-bottom {
+        margin-bottom: 30px;
+    }
+
+    .contenedor-formulario {
+        margin-bottom: 60px;
+        width: 100% !important;
+    }
+
+    .contenedor-mapa {
+        width: 100% !important;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .gmap_canvas {
+        width: 558px !important;
+    }
+
+    .mapouter  {
+        width: 558px !important;
+    }
+
+    .mapa-right {
+        margin-bottom: 50px;
+    }
+
+    .seccion-3-contactos h2 {
+        font-size: 25px;
+    }
+
+    .seccion-3-contactos p {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .seccion-3-contactos a {
+        font-size: 18px;
+    }
+
+    footer {
+        padding-top: 25px;
+    }
+
+    .contenedor-footer-fila-1 {
+        left: 0;
+    }
+
+    .contenedor-footer-fila-2 {
+        right: 0;
+        align-items: center;
+    }
+
+    .links-footer {
+        width: 500px;
+    }
+
+}
+ 
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .column-left-hamburg-contacto {
+        height: 70px;
+    }
+
+    .column-left-hamburg-contacto div img {
+        width: 100%;
+        position: relative;
+        top: -25px;
+        left: -113px;
+    }
+
+    .logo-responsive-contacto {
+        right: 35px;
+    }
+
+    .column-center-hamburg-contacto {
+        position: relative;
+        left: -25px;
+        height: 590px;
+        top: 60px;
+    }
+
+    .title-box-top h2 {
+        font-size: 32px;
+    }
+
+    .logo-mind-contacto {
+        left: 0;
+    }
+
+    .menu {
+        height: 600px;
+        position: fixed;
+    }
+
+    .contenedor-box-bottom {
+        margin-bottom: 70px;
+        flex-wrap: wrap;
+        justify-content: center;
+        position: relative;
+        left: -30px;
+    }
+
+    .box-bottom {
+        margin-bottom: 30px;
+        margin-left: 50px;
+    }
+
+    .contenedor-formulario {
+        margin-bottom: 60px;
+        width: 100% !important;
+    }
+
+    .contenedor-mapa {
+        width: 100% !important;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .gmap_canvas {
+        width: 558px !important;
+    }
+
+    .mapouter  {
+        width: 558px !important;
+    }
+
+    .mapa-right {
+        margin-bottom: 50px;
+    }
+
+    .seccion-3-contactos h2 {
+        font-size: 25px;
+    }
+
+    .seccion-3-contactos p {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .seccion-3-contactos a {
+        font-size: 18px;
+    }
+
+    footer {
+        padding-top: 25px;
+    }
+
+    .contenedor-footer-fila-1 {
+        left: 0;
+    }
+
+    .contenedor-footer-fila-2 {
+        right: 0;
+        align-items: center;
+    }
+
+    .links-footer {
+        width: 500px;
+    }
+
+    .column-left {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+   
+    .box-bottom {
+        margin-left: 10px;
+    }
+
+    .mapa-right {
+        width: 477px;
+    }
+
+    .gmap_canvas {
+        width: 475px !important;
+    }
+
+    .mapouter  {
+        width: 475px !important;
+    }
+
+    .contenedor-box-bottom {
+        margin-bottom: 70px;
+        flex-wrap: wrap;
+        justify-content: center;
+        position: relative;
+        left: -50px;
+    }
+
+    .box-bottom {
+        margin-bottom: 40px;
+        margin-left: 92px;
+    }
+
+    
+}
+
+@media (min-width: 1200px) { 
+
+}
+
+
+
+
+
+
+
+  
+
+
+
+
+
